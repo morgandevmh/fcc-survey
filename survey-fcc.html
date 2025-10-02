@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+   <meta charset="utf-8">
+   <title>Enquête de satisfaction sur notre salle de sport</title>
+   <link rel="stylesheet" href="styles.css"/>
+ </head>
+
+
+<body>
+<h1 id="title">Enquête de satisfaction sur notre salle de sport</h1>
+<p id="description">Votre avis nous intéresse !</p>
+<form id="survey-form">
+  <fieldset>
+    <label id="name-label" for="name">Nom/Prénom
+      <input id="name" name="name" type="text" placeholder="Jean Dupont" required />
+    </label>
+    <label id="email-label" for="email">Mail
+      <input id="email" name="email" type="email" placeholder="jean.dupont@exemple.com" required />
+    </label>
+    <label id="number-label" for="number">Âge
+      <input id="number" name="number" type="number" placeholder="25" min="16" max="120" required />
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Je suis inscrit(e) depuis :</legend>
+    <label for="moins-6-mois">
+      <input id="moins-6-mois" class="inline" type="radio" value="moins de 6 mois" name="abonnement" checked /> 
+      Moins de 6 mois
+    </label>
+    <label for="plus-6-mois">
+      <input id="plus-6-mois" class="inline" type="radio" value="plus de 6 mois" name="abonnement" /> 
+      Plus de 6 mois
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Évaluation générale :</legend>
+    <label for="dropdown">Comment évaluez-vous votre expérience ?
+      <select id="dropdown" name="satisfaction">
+        <option value="">-- Choisissez une option --</option>
+        <option value="tres-satisfait">Je suis très satisfait(e) de mon expérience !</option>
+        <option value="satisfait">Je pense que des améliorations sont encore possibles</option>
+        <option value="pas-satisfait">Je ne suis pas satisfait(e) de mon expérience</option>
+        <option value="sans-opinion">Sans opinion</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Quelles améliorations souhaiteriez-vous voir ?</legend>
+    <label for="machines-musculation">
+      <input id="machines-musculation" class="inline" name="ameliorations" type="checkbox" value="machines-musculation"/>
+      Nouvelles machines de musculation
+    </label>
+    <label for="machines-cardio">
+      <input id="machines-cardio" class="inline" name="ameliorations" type="checkbox" value="machines-cardio"/>
+      Nouvelles machines de cardio
+    </label>
+    <label for="nutrition">
+      <input id="nutrition" class="inline" name="ameliorations" type="checkbox" value="nutrition"/>
+      Vente de compléments alimentaires/produits de nutrition
+    </label>
+    <label for="suggestions">Autres suggestions :
+      <textarea id="suggestions" name="suggestions" placeholder="Suggérez-nous des nouveautés ou des améliorations..."></textarea>
+    </label>
+    <input id="submit" type="submit" value="Envoyer l'enquête"/>
+  </fieldset>
+</form>
+</body>
+</html>
